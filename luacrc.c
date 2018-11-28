@@ -40,9 +40,9 @@ static luaL_Reg crclibs[] = {
     {NULL,NULL}
 };
 
-int luaopen_libcrc(lua_State* L)
+int luaopen_libcrc(lua_State* L)/*luaopen_libcrc中的"libcrc"是编译生成动态库的名字*/
 {
     lua_newtable(L);
-    luaL_setfuncs(L,crclibs,0);
+    luaL_setfuncs(L,crclibs,0);/*注册crclibs中所有函数*/
     return 1;
 }
